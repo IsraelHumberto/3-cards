@@ -1,16 +1,32 @@
+:root {
+	--bright-orange: #e38826;
+	--dark-cyan: #006970;
+	--very-dark-cyan: #004241;
+	--very-light-gray: #f2f2f2;
+}
+
 body {
 	margin: 0;
 	padding: 0;
-	font-size: 13px;
-	font-family: 'Lexend Deca', serif;
-	color: #fff;
-	background-color: #f2f2f2;
+	background-color: var(--very-light-gray);
 }
 
 h1 {
 	font-family: 'Big Shoulders Display', serif;
-	color: #f2f2f2;
+	color: var(--very-light-gray);
 	font-size: 2.5em;
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 14px;
+	font-family: 'Lexend Deca', serif;
+	color: #fff;
+	line-height: 1.7;
+}
+
+a {
+	text-decoration: none;
 }
 
 main {
@@ -30,36 +46,55 @@ main {
 	height: 75vh;
 }
 
-.item {
-	padding: 20%;
+.card {
+	padding: 45px ;
 	display: grid;
 	grid-template-rows: auto auto 1fr auto;
 	justify-content: space-around;
-
 }
 
-.item:hover {
-	transform: scale(1.03);
-	transition-duration: 0.3s;
-}
 
-.item button {
+.card .btn {
 	border-radius: 20px;
 	padding: 10px;
 	border:0;
-	width: 80%;
+	width: 130px;
 	height: 40px;
 	font-family:'Lexend Deca';
+	cursor: pointer;
 }
 
-.item-1 {
-	background: #e38826;
+
+.card-sedans {
+	background: var(--bright-orange);
+	border-radius: 10px 0 0 10px;
 }
 
-.item-2 {
-	background: #006970;
+.card-suvs {
+	background:  var(--dark-cyan);
 }
 
-.item-3 {
-	background: #004241;
+.card-luxury {
+	background: var(--very-dark-cyan);
+	border-radius: 0 10px 10px 0;
+}
+
+
+.card-sedans .btn {
+	color: var(--bright-orange);
+}
+
+.card-suvs .btn {
+	color: var(--dark-cyan);
+}
+
+.card-luxury .btn {
+	color: var(--very-dark-cyan);
+}
+
+.card .btn:hover {
+	background-color: transparent;
+	color: #fff;
+	border: #fff solid 1px;
+	transition: ease-in 0.2s;
 }
