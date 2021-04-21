@@ -22,7 +22,7 @@ p {
 	font-size: 14px;
 	font-family: 'Lexend Deca', serif;
 	color: #fff;
-	line-height: 1.7;
+	line-height: 1.8;
 }
 
 a {
@@ -35,22 +35,22 @@ main {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	top: 50%;
 }
 
 .container {
 	display: grid;
 	border-radius: 20px;
-	grid-template-columns: repeat(3, minmax(200px, 1fr));	
-	width: 65%;
+	grid-template-columns: repeat(3, minmax(200px, 1fr));
 	height: 75vh;
 }
 
 .card {
-	padding: 45px ;
+	padding: 45px;
+	width: 200px;
+	max-height: 400px;
 	display: grid;
-	grid-template-rows: auto auto 1fr auto;
-	justify-content: space-around;
+	grid-template-rows: 1fr 2fr 5fr 1fr;
+	justify-content: start;
 }
 
 
@@ -97,4 +97,33 @@ main {
 	color: #fff;
 	border: #fff solid 1px;
 	transition: ease-in 0.2s;
+}
+
+footer {
+	width: 400px;
+	margin: 0 auto;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 876px) {
+
+	.container {
+		display: grid;
+		grid-template-columns: 1fr;
+		margin: 45px;
+	}
+
+	.card {
+		width: 75%;
+		height: 350px;
+	}
+
+	.card-sedans {
+		border-radius: 10px 10px 0 0;
+	}
+
+	.card-luxury {
+		border-radius: 0 0 10px 10px;
+	}
 }
